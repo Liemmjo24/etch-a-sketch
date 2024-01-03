@@ -16,5 +16,10 @@ function populateBoard(size){
 populateBoard(16);
 
 function changeSize(input){
-    populateBoard(input);
+    if (input >= 2 && input <= 64) {
+        populateBoard(input);
+    } else {
+        alert('Please enter a number between 2 and 64!')
+    }
+    
 }
