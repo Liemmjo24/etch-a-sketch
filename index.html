@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="flex">
+    <div class="flex-container">
         <div class="title">Etch-a-Sketch</div>
         <div class="content">
             <div class="board"></div>
@@ -17,7 +17,12 @@
                 <button>Reset</button>
             </div>
             <div>
-                <input type="text" placeholder="Size of board" value="16">
+                <input 
+                type="text" 
+                placeholder="Size of board" 
+                value="16" 
+                onchange="changeSize(this.value)" 
+                />
                 <button>Set Size</button>
             </div>
         </div>
@@ -25,3 +30,4 @@
     <script src="javascript.js"></script>
 </body>
 </html>
+16
