@@ -8,6 +8,9 @@ function populateBoard(size){
     const amount = size * size
     for(let x = 0; x <= amount; x++){
         const square = document.createElement('div');
+        square.addEventListener('mouseover', () =>{
+            square.style.backgroundColor = 'black';
+        });
         square.style.backgroundColor = 'blue';
         board.insertAdjacentElement('beforeend', square);
     }
@@ -21,5 +24,4 @@ function changeSize(input){
     } else {
         alert('Please enter a number between 2 and 64!')
     }
-    
 }
