@@ -1,5 +1,4 @@
-const color = 'black';
-
+const color = "black";
 
 function populateBoard(size){
     const board = document.querySelector(".board");
@@ -12,7 +11,7 @@ function populateBoard(size){
     for(let x = 0; x <= amount; x++){
         const square = document.createElement('div');
         square.addEventListener('mouseover', colorSquare);
-        square.style.backgroundColor = 'blue';
+        square.style.backgroundColor = 'white';
         board.insertAdjacentElement('beforeend', square);
     }
 }
@@ -32,7 +31,7 @@ function colorSquare(){
     this.style.backgroundColor = color;
 }
 
-function changeColor(){
+function changeColor(choice){
     color = choice;
 }
 
