@@ -1,3 +1,6 @@
+const color = 'black';
+
+
 function populateBoard(size){
     const board = document.querySelector(".board");
     const squares = board.querySelectorAll("div");
@@ -8,9 +11,7 @@ function populateBoard(size){
     const amount = size * size
     for(let x = 0; x <= amount; x++){
         const square = document.createElement('div');
-        square.addEventListener('mouseover', () =>{
-            square.style.backgroundColor = 'black';
-        });
+        square.addEventListener('mouseover', colorSquare);
         square.style.backgroundColor = 'blue';
         board.insertAdjacentElement('beforeend', square);
     }
@@ -25,3 +26,13 @@ function changeSize(input){
         alert('Please enter a number between 2 and 64!')
     }
 }
+
+//this refers to square in populateBoard function
+function colorSquare(){
+    this.style.backgroundColor = color;
+}
+
+function changeColor(){
+    color = choice;
+}
+
