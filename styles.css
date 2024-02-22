@@ -1,5 +1,28 @@
+*{
+    background-color:rgb(224, 187, 235)
+}
 .board{
     width:500px;
     height:500px;
     display:grid;
+    padding:5px;
+    border:solid 5px black;
+}
+.title{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:2em;
+    text-align:center;
+}
+
+.flex-container{
+    display:flex;
+    justify-content: center;
+    text-align:center
+}
+.buttons{
+    padding:5px;
+    margin:5px;
+    cursor:pointer;
 }
