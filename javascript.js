@@ -1,5 +1,11 @@
 let color = "black";
 
+//To allow the click and drag function
+let mouseDown = false;
+document.body.onmousedown = () =>(mouseDown = true)
+document.body.onmouseup = () => (mouseDown = false)
+
+
 function populateBoard(size){
     const board = document.querySelector(".board");
     const squares = board.querySelectorAll("div");
@@ -27,9 +33,10 @@ function changeSize(input){
 }
 
 //this refers to square in populateBoard function
-function colorSquare(){
-    if(color === 'random'){
-        this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+function colorSquare(e){
+    if(e.type === 'mouseover' && !mouseDown) return
+    if((color === 'random')){
+        this.style.backgroundColor = `hsl(${Math.random() *360}, 100%, 50%)`;
     } else {
         this.style.backgroundColor = color;
     }
